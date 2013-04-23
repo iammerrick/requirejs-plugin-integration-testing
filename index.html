@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Require.js Plugin Testing</title>
+  <link rel="stylesheet" href="vendor/mocha.css" />
+  <script type="text/javascript" src="vendor/chai.js"></script>
+  <script type="text/javascript" src="vendor/mocha.js"></script>
+  <script type="text/javascript" src="config.js"></script>
+  <script type="text/javascript" src="vendor/r.js"></script>
+  <script type="text/javascript">
+    // I like the taste.
+    var expect = chai.expect;
+    mocha.setup('bdd');
+
+    require(['test/TemplateCompilationTest'], function() {
+      mocha.run();
+    });
+  </script>
+</head>
+<body>
+  <div id="mocha"></div>
+</body>
+</html>
